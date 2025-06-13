@@ -11,6 +11,7 @@
       ./modules/i3.nix
       ./modules/neovim.nix
       ./modules/packages/utils.nix
+      ./users/joliver.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -62,12 +63,6 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.joliver = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-  };
 
   programs.firefox.enable = true;
 
