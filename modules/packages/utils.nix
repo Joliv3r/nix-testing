@@ -20,5 +20,7 @@
     gcc
     nodejs
     fzf
+    rustc
+    cargo
   ];
 }

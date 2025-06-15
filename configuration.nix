@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, ... }:
+{ ... }:
 
 {
   imports =
@@ -42,13 +42,14 @@
     autorun = false;
     xkb = {
       layout = "us";
-      options = "caps:ctrl";
+      options = "ctrl:nocaps";
     };
     displayManager.startx = {
       enable = true;
       generateScript = true;
     };
   };
+
   
   # Enable CUPS to print documents.
   # services.printing.enable = true;
@@ -56,13 +57,20 @@
   # Enable sound.
   # services.pulseaudio.enable = true;
   # OR
-  # services.pipewire = {
-  #   enable = true;
-  #   pulse.enable = true;
-  # };
+  services.pipewire = {
+    enable = true;
+    pulse.enable = true;
+  };
 
   # Enable touchpad support (enabled default in most desktopManager).
-  services.libinput.enable = true;
+  services.libinput = {
+    enable = true;
+    touchpad = {
+      naturalScrolling = true;
+      tapping = true;
+      middleEmulation = true;
+    };
+  };
 
   programs.firefox.enable = true;
 
