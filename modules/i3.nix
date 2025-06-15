@@ -1,4 +1,4 @@
-{ config, pkgs, callPackage, ... }:
+{ pkgs, ... }:
 
 {
   environment.pathsToLink = [ "/libexec" ];  # links /libexec from derivations to /run/current-system/sw
