@@ -13,6 +13,10 @@
       zoxide
       qutebrowser
       pass
+      signal-desktop
     ];
   };
+
+  programs.firefox.enable = true;
+  programs.direnv.enable = true;
 }

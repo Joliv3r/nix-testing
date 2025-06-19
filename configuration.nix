@@ -11,37 +11,22 @@
       ./modules/i3.nix
       ./modules/neovim.nix
       ./modules/packages/utils.nix
+      ./modules/packages/dev.nix
       ./modules/efi.nix
       ./modules/X.nix
       ./modules/secret.nix
+      ./modules/audio.nix
       ./users/joliver.nix
     ];
 
   networking.hostName = "runningman"; # Define your hostname.
   boot.blacklistedKernelModules = [ "elan_i2c" ];
+  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "usb_storage" "sd_mod" ];
+  boot.kernelModules = [ "kvm-amd" ];
 
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;
-
-  # Enable sound.
-  # services.pulseaudio.enable = true;
-  # OR
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-  };
-
-  programs.firefox.enable = true;
-
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
 
   # List services that you want to enable:
 

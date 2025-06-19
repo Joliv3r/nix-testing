@@ -17,11 +17,7 @@
     killall
     fd
     ripgrep
-    gcc
-    nodejs
     fzf
-    rustc
-    cargo
     file
   ];
 }
