@@ -18,6 +18,7 @@
     ];
 
   networking.hostName = "runningman"; # Define your hostname.
+  boot.blacklistedKernelModules = [ "elan_i2c" ];
 
 
   # Enable CUPS to print documents.
