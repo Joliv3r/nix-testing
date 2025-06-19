@@ -4,18 +4,18 @@
     overrides = (builtins.fromTOML (builtins.readFile ./rust-toolchain.toml));
     libPath = with pkgs; lib.makeLibraryPath [
       # load external libraries that you need in your rust project here
-      openssl
+      # openssl
     ];
 in
-  pkgs.mkShell rec {
+  pkgs.mkShell {
     buildInputs = with pkgs; [
       clang
       # Replace llvmPackages with llvmPackages_X, where X is the latest LLVM version (at the time of writing, 16)
       llvmPackages.bintools
       rustup
-      pkg-config
-      fontconfig
-      gnum4
+      # pkg-config
+      # fontconfig
+      # gnum4
     ];
     RUSTC_VERSION = overrides.toolchain.channel;
     # https://github.com/rust-lang/rust-bindgen#environment-variables
@@ -42,5 +42,4 @@ in
       ''-I"${pkgs.glib.dev}/include/glib-2.0"''
       ''-I${pkgs.glib.out}/lib/glib-2.0/include/''
     ];
-    # OPENSSL_DIR = pkgs.lib.makeLibraryPath [ pkgs.pkg-config ];
   }
