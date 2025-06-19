@@ -12,6 +12,7 @@
     packages = with pkgs; [
       zoxide
       qutebrowser
+      pass
     ];
   };
 }

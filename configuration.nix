@@ -13,6 +13,7 @@
       ./modules/packages/utils.nix
       ./modules/efi.nix
       ./modules/X.nix
+      ./modules/secret.nix
       ./users/joliver.nix
     ];
 

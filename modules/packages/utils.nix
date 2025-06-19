@@ -22,5 +22,6 @@
     fzf
     rustc
     cargo
+    file
   ];
 }
