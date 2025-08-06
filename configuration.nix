@@ -19,7 +19,7 @@
       ./users/joliver.nix
     ];
 
-  networking.hostName = "runningman"; # Define your hostname.
+  networking.hostName = "hilbert"; # Define your hostname.
   boot.blacklistedKernelModules = [ "elan_i2c" ];
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "usb_storage" "sd_mod" ];
   boot.kernelModules = [ "kvm-amd" ];

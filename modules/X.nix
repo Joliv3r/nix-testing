@@ -21,7 +21,7 @@
   # Enable the X11 windowing system.
   services.xserver = {
     enable = true;
-    autorun = false;
+    autorun = true;
     xkb = {
       layout = "us";
       options = "ctrl:nocaps";
