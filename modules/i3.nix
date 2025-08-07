@@ -21,6 +21,7 @@
         polybar
         alacritty
         neofetch
+        brightnessctl
       ];
     };
   }; 
