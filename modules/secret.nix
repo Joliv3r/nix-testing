@@ -7,4 +7,8 @@
      pinentryPackage = pkgs.pinentry-gtk2;
      enableSSHSupport = true;
   };
+
+  environment.systemPackages = with pkgs; [
+    pinentry-gtk2
+  ];
 }
