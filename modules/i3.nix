@@ -26,4 +26,10 @@
     };
   }; 
   programs.i3lock.enable = true;
+
+  nixpkgs.config.packageOverrides = pkgs: {
+    polybar = pkgs.polybar.override {
+      pulseSupport = true;
+    };
+  };
 }

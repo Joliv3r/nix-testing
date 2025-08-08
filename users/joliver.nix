@@ -14,6 +14,7 @@
       qutebrowser
       pass
       signal-desktop
+      tmux
     ];
   };
 
