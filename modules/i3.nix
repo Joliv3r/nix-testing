@@ -22,11 +22,15 @@
         alacritty
         neofetch
         brightnessctl
+        imagemagick
+        scrot
+        i3-swallow
       ];
     };
   }; 
   programs.i3lock.enable = true;
 
+  # Make sure polybar has pulse support
   nixpkgs.config.packageOverrides = pkgs: {
     polybar = pkgs.polybar.override {
       pulseSupport = true;
