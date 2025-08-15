@@ -12,7 +12,6 @@
     pyright
     nil
     lua-language-server
-    rust-analyzer
     texlab
     bash-language-server
     ccls
