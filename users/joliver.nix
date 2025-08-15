@@ -15,6 +15,7 @@
       pass
       signal-desktop
       tmux
+      zathura
     ];
   };
 
