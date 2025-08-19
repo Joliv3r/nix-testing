@@ -39,6 +39,7 @@
       naturalScrolling = true;
       tapping = true;
       middleEmulation = true;
+      tappingDragLock = false;
     };
   };
 
