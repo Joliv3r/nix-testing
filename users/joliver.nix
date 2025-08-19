@@ -16,6 +16,7 @@
       signal-desktop
       tmux
       zathura
+      tldr
     ];
   };
 
