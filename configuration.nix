@@ -17,6 +17,7 @@
       ./modules/secret.nix
       ./modules/audio.nix
       ./users/joliver.nix
+      ./modules/packages/latex.nix
     ];
 
   networking.hostName = "hilbert"; # Define your hostname.
