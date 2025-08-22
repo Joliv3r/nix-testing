@@ -17,6 +17,7 @@
       tmux
       zathura
       tldr
+      brave
     ];
   };
 
