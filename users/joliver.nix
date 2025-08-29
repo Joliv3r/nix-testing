@@ -17,8 +17,11 @@
       tmux
       zathura
       tldr
+      qmk
     ];
   };
+
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   programs.firefox.enable = true;
   programs.direnv.enable = true;
