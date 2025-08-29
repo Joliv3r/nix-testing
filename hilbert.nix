@@ -20,25 +20,9 @@
       ./modules/private.nix
       ./users/joliver.nix
       ./modules/packages/latex.nix
+      # ./hosts/hausdorff.nix
+      # ./hosts/hilbert.nix
     ];
-
-  networking.hostName = "hilbert"; # Define your hostname.
-  boot.blacklistedKernelModules = [ "elan_i2c" ];
-  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "usb_storage" "sd_mod" ];
-  boot.kernelModules = [ "kvm-amd" ];
-
-
-  # Enable CUPS to print documents.
-  # services.printing.enable = true;
-
-  # List services that you want to enable:
-
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
 
   # Copy the NixOS configuration file and link it from the resulting system
   # (/run/current-system/configuration.nix). This is useful in case you

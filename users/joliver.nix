@@ -18,6 +18,7 @@
       zathura
       tldr
       qmk
+      brave
     ];
   };
 
