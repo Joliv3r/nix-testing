@@ -20,9 +20,10 @@
       ./modules/private.nix
       ./users/joliver.nix
       ./modules/packages/latex.nix
-      # ./hosts/hausdorff.nix
-      # ./hosts/hilbert.nix
     ];
+
+  networking.hostName = "hilbert"; # Define your hostname.
+  boot.blacklistedKernelModules = [ "elan_i2c" ];
 
   # Copy the NixOS configuration file and link it from the resulting system
   # (/run/current-system/configuration.nix). This is useful in case you
