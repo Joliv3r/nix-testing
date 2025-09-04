@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, lib, ... }:
 
 {
   # Pick only one of the below networking options.
@@ -33,7 +33,7 @@
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
-  services.libinput = {
+  services.libinput = lib.mkIf (!(config.networking.hostName == "hausdorff")){
     enable = true;
     touchpad = {
       naturalScrolling = true;
