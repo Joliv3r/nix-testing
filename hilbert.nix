@@ -19,6 +19,7 @@
       ./modules/ssh.nix
       ./modules/private.nix
       ./users/joliver.nix
+      ./modules/packages/gap.nix
       ./modules/packages/latex.nix
     ];
 
