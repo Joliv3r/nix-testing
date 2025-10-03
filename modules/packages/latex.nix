@@ -7,6 +7,7 @@
       scheme-medium
       collection-latexextra
       tikz-cd
+      biber
       ;
      })
   ];
