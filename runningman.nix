@@ -19,6 +19,7 @@
       ./modules/ssh.nix
       ./modules/private.nix
       ./users/joliver.nix
+      ./users/scrambler.nix
     ];
 
   networking.hostName = "runningman"; # Define your hostname.
