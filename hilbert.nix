@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ ... }:
+{ lib, pkgs, ... }:
 
 {
   imports =
@@ -25,6 +25,11 @@
 
   networking.hostName = "hilbert"; # Define your hostname.
   boot.blacklistedKernelModules = [ "elan_i2c" ];
+
+  environment.systemPackages = with pkgs; [
+    vlc
+    prismlauncher
+  ];
 
   # Copy the NixOS configuration file and link it from the resulting system
   # (/run/current-system/configuration.nix). This is useful in case you
