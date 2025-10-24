@@ -22,7 +22,6 @@
         alacritty
         neofetch
         brightnessctl
-        imagemagick
         scrot
         i3-swallow
       ];
