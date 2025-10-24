@@ -17,6 +17,5 @@
     ccls
     tree-sitter
     xclip
-    rust-analyzer
   ];
 }
