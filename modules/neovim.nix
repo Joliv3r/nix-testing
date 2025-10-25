@@ -17,5 +17,6 @@
     ccls
     tree-sitter
     xclip
+    rocmPackages.clang
   ];
 }
