@@ -31,6 +31,15 @@
     prismlauncher
   ];
 
+  # Hilbert is currently on a ThinkPad with tracking point
+  services.xserver.config = ''
+    Section "InputClass"
+      Identifier "disable touchpad"
+      MatchIsTouchpad "on"
+      Option "Ignore" "on"
+    EndSection
+  '';
+
   # This option seems to be necessary when building the OS from scratch
   # services.logrotate.checkConfig = false;
 
