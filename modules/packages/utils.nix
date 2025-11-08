@@ -19,6 +19,6 @@
     ripgrep
     fzf
     file
-    python313
+    python314
   ];
 }
