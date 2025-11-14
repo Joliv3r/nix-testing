@@ -2,8 +2,7 @@
   description = "Building personal machines.";
 
   inputs = {
-    # NixOS official package source, here using the nixos-25.05 branch
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
 
   outputs = { self, nixpkgs, ... }@inputs :
