@@ -21,6 +21,7 @@
       ./users/joliver.nix
       ./modules/packages/gap.nix
       ./modules/packages/latex.nix
+      ./modules/keyboard.nix
     ];
 
   networking.hostName = "hilbert"; # Define your hostname.
