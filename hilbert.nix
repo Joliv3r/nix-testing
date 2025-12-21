@@ -20,6 +20,7 @@
       ./modules/private.nix
       ./users/joliver.nix
       ./modules/packages/gap.nix
+      ./modules/packages/sage.nix
       ./modules/packages/latex.nix
       ./modules/keyboard.nix
     ];
