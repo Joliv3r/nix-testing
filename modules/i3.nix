@@ -20,7 +20,7 @@
         dmenu
         polybar
         alacritty
-        neofetch
+        fastfetch
         brightnessctl
         scrot
         i3-swallow
