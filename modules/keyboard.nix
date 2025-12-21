@@ -15,6 +15,22 @@ let
           type = "FOUR_LEVEL_SEMIALPHABETIC",
           symbols[Group1] = [ f, F, backslash, backslash ] 
         };
+        key <AC03> { 
+          type = "FOUR_LEVEL_SEMIALPHABETIC",
+          symbols[Group1] = [ d, D, braceright, braceright ] 
+        };
+        key <AC02> { 
+          type = "FOUR_LEVEL_SEMIALPHABETIC",
+          symbols[Group1] = [ s, S, braceleft, braceleft ] 
+        };
+        key <AD03> { 
+          type = "FOUR_LEVEL_SEMIALPHABETIC",
+          symbols[Group1] = [ e, E, bracketright, bracketright ] 
+        };
+        key <AD02> { 
+          type = "FOUR_LEVEL_SEMIALPHABETIC",
+          symbols[Group1] = [ w, W, bracketleft, bracketleft ] 
+        };
       };
     };
   '';
