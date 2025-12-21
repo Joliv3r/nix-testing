@@ -19,11 +19,13 @@
       tldr
       qmk
       brave
+      btop
+      firefox
     ];
   };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  programs.firefox.enable = true;
+  # programs.firefox.enable = true;
   programs.direnv.enable = true;
 }
