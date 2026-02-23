@@ -21,6 +21,7 @@
       ./users/joliver.nix
       ./modules/packages/latex.nix
       ./modules/steam.nix
+      ./modules/stub-ld.nix
     ];
 
   networking.hostName = "hausdorff"; # Define your hostname.

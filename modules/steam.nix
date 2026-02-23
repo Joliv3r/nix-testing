@@ -35,5 +35,5 @@
   # For Celeste mods
   environment.systemPackages = with pkgs; [
     everest-mons
-  ]
+  ];
 }
