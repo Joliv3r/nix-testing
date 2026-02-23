@@ -27,6 +27,7 @@
   environment.systemPackages = with pkgs; [
     vlc
     prismlauncher
+    libreoffice
   ];
 
   # Copy the NixOS configuration file and link it from the resulting system
