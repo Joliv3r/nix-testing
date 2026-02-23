@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports =
@@ -13,6 +13,7 @@
       ./modules/packages/utils.nix
       ./modules/packages/dev.nix
       ./modules/efi.nix
+      ./modules/stub-ld.nix
       ./modules/X.nix
       ./modules/secret.nix
       ./modules/audio.nix
@@ -20,7 +21,10 @@
       ./modules/private.nix
       ./users/joliver.nix
       ./modules/packages/gap.nix
+      ./modules/packages/sage.nix
       ./modules/packages/latex.nix
+      ./modules/keyboard.nix
+      ./modules/steam.nix
     ];
 
   networking.hostName = "hilbert"; # Define your hostname.
@@ -39,6 +43,8 @@
       Option "Ignore" "on"
     EndSection
   '';
+
+  services.fprintd.enable = true;
 
   # This option seems to be necessary when building the OS from scratch
   # services.logrotate.checkConfig = false;

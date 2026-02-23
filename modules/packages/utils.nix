@@ -20,5 +20,6 @@
     fzf
     file
     python314
+    dig
   ];
 }
