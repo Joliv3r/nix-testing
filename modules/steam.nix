@@ -31,4 +31,9 @@
   environment.sessionVariables = {
     LIBVA_DRIVER_NAME = "iHD";
   };
+
+  # For Celeste mods
+  environment.systemPackages = with pkgs; [
+    everest-mons
+  ]
 }
