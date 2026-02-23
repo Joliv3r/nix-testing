@@ -44,6 +44,8 @@
     EndSection
   '';
 
+  services.fprintd.enable = true;
+
   # This option seems to be necessary when building the OS from scratch
   # services.logrotate.checkConfig = false;
 
