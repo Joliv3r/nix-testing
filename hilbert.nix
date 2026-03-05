@@ -25,6 +25,7 @@
       ./modules/packages/latex.nix
       ./modules/keyboard.nix
       ./modules/steam.nix
+      ./modules/docker.nix
     ];
 
   networking.hostName = "hilbert"; # Define your hostname.
