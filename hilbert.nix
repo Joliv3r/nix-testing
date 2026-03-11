@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+
       ./modules/i3.nix
       ./modules/neovim.nix
       ./modules/packages/utils.nix
@@ -19,13 +20,16 @@
       ./modules/audio.nix
       ./modules/ssh.nix
       ./modules/private.nix
-      ./users/joliver.nix
       ./modules/packages/gap.nix
       ./modules/packages/sage.nix
       ./modules/packages/latex.nix
       ./modules/keyboard.nix
       ./modules/steam.nix
       ./modules/docker.nix
+
+      ./users/joliver.nix
+      # Uncomment scrambler when a scrambling account is needed.
+      # ./users/scrambler.nix
     ];
 
   networking.hostName = "hilbert"; # Define your hostname.
