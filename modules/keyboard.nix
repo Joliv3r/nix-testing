@@ -37,7 +37,7 @@ let
 in 
 {
   environment.systemPackages = with pkgs; [
-    xorg.xkbcomp
+    xkbcomp
   ];
 
   # Applying this is handled by i3 when starting and changing keyboard layouts.
