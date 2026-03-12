@@ -2,12 +2,13 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+
       ./modules/i3.nix
       ./modules/neovim.nix
       ./modules/packages/utils.nix
@@ -17,10 +18,11 @@
       ./modules/secret.nix
       ./modules/audio.nix
       ./modules/ssh.nix
-      ./modules/private.nix
+
       ./users/joliver.nix
-      ./users/scrambler.nix
-    ];
+      # Uncomment scrambler when a scrambling account is needed.
+      # ./users/scrambler.nix
+    ] ++ lib.optional (builtins.pathExists ./modules/private.nix) [ ./modules/private.nix ];
 
   networking.hostName = "runningman"; # Define your hostname.
 

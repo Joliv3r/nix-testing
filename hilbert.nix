@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   imports =
@@ -19,7 +19,6 @@
       ./modules/secret.nix
       ./modules/audio.nix
       ./modules/ssh.nix
-      ./modules/private.nix
       ./modules/packages/gap.nix
       ./modules/packages/sage.nix
       ./modules/packages/latex.nix
@@ -30,7 +29,8 @@
       ./users/joliver.nix
       # Uncomment scrambler when a scrambling account is needed.
       # ./users/scrambler.nix
-    ];
+    ] ++ lib.optional (builtins.pathExists ./modules/private.nix) [ ./modules/private.nix ];
+
 
   networking.hostName = "hilbert"; # Define your hostname.
   boot.blacklistedKernelModules = [ "elan_i2c" ];
