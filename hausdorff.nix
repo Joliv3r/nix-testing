@@ -2,10 +2,9 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ pkgs, lib, ... }:
-
-{
-  imports =
+{ pkgs, ... }:
+let
+  defaultImports = 
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
 
@@ -20,10 +19,13 @@
       ./modules/ssh.nix
       ./modules/packages/latex.nix
       ./modules/steam.nix
-      ./modules/stub-ld.nix
 
       ./users/joliver.nix
-    ] ++ lib.optional (builtins.pathExists ./modules/private.nix) [ ./modules/private.nix ];
+    ];
+in 
+
+{
+  imports =  if builtins.pathExists ./modules/private.nix then defaultImports ++ [ ./modules/private.nix ] else defaultImports;
 
   networking.hostName = "hausdorff"; # Define your hostname.
 

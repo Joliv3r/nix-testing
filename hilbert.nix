@@ -2,10 +2,9 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ pkgs, lib, ... }:
-
-{
-  imports =
+{ pkgs, ... }:
+let
+  defaultImports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
 
@@ -14,7 +13,6 @@
       ./modules/packages/utils.nix
       ./modules/packages/dev.nix
       ./modules/efi.nix
-      ./modules/stub-ld.nix
       ./modules/X.nix
       ./modules/secret.nix
       ./modules/audio.nix
@@ -29,7 +27,10 @@
       ./users/joliver.nix
       # Uncomment scrambler when a scrambling account is needed.
       # ./users/scrambler.nix
-    ] ++ lib.optional (builtins.pathExists ./modules/private.nix) [ ./modules/private.nix ];
+    ];
+in
+{
+  imports =  if builtins.pathExists ./modules/private.nix then defaultImports ++ [ ./modules/private.nix ] else defaultImports;
 
 
   networking.hostName = "hilbert"; # Define your hostname.
