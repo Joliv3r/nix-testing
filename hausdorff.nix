@@ -30,8 +30,6 @@ in
   networking.hostName = "hausdorff"; # Define your hostname.
 
   environment.systemPackages = with pkgs; [
-    vlc
-    prismlauncher
     libreoffice
     obs-studio
   ];

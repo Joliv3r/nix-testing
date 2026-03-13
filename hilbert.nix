@@ -36,11 +36,6 @@ in
   networking.hostName = "hilbert"; # Define your hostname.
   boot.blacklistedKernelModules = [ "elan_i2c" ];
 
-  environment.systemPackages = with pkgs; [
-    vlc
-    prismlauncher
-  ];
-
   # Hilbert is currently on a ThinkPad with tracking point
   services.xserver.config = ''
     Section "InputClass"

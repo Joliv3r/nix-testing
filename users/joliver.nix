@@ -21,6 +21,7 @@
       brave
       btop
       firefox
+      vlc
     ];
   };
 
